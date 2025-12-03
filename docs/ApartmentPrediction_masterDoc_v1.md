@@ -144,6 +144,23 @@ public class Apartment {
 }
 ```
 
+
+
+```java
+public class Owner {
+
+    private  String id;
+    private String name;
+    private String email;
+    private int age;
+    private boolean isActive;
+    private boolean isBusiness;
+    private String idLegalOwner;
+    private LocalDate registrationDate;
+    private int qtyDaysAsOwner;
+}
+```
+
 ## pom.xml
 
 ```xml
