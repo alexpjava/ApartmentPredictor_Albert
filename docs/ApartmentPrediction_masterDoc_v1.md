@@ -239,30 +239,32 @@ todo
 > - Browser based Console application
 > - Small footprint: around <mark>2.5 MB jar file size</mark>
 
+References:
+
 - Official web: https://h2database.com/html/installation.html
-
 - Create H2 db from CLI: [Lab#SB08-3: H2 and API Rest – albertprofe wiki](https://albertprofe.dev/springboot/sblab8-3.html#h2-db)
-
 - Step-by-step: [Spring Boot: H2 DB and Thymeleaf – albertprofe wiki](https://albertprofe.dev/springboot/boot-what-create-th-h2.html)
+- DDL: [DDL auto generation](https://albertprofe.dev/springboot/sblab8-3.html#configuring-h2-database-in-spring-boot-with-ddl-auto-generation)
+- Woking with different profiles: [Profiles and enviroment](https://albertprofe.dev/springboot/sblab8-3.html#working-on-different-environments)  
+- [Lab#SB08-3: H2 and API Rest – albertprofe wiki](https://albertprofe.dev/springboot/sblab8-3.html)
 
-- DDL: [Spring Boot: H2 DB and Thymeleaf – albertprofe wiki](https://albertprofe.dev/springboot/boot-what-create-th-h2.html)
-  Config `applcations properties` 
-  
-  ```properties
-  spring.application.name=ApartmentPredictor
-  #spring.datasource.url=jdbc:h2:tcp://localhost/~/MyProjects/Sandbox/ApartmentPredictorProject/db/rapartmentpredictordb
-  spring.datasource.url=jdbc:h2:/home/albert/MyProjects/Sandbox/ApartmentPredictorProject/db/apartmentpredictordb
-  #spring.datasource.url=jdbc:h2:mem:testdb
-  spring.datasource.driverClassName=org.h2.Driver
-  spring.datasource.username=albert
-  #spring.datasource.username=sa
-  spring.datasource.password=1234
-  #spring.datasource.password=
-  spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-  spring.jpa.show-sql=true
-  #spring.jpa.hibernate.ddl-auto=create
-  spring.jpa.hibernate.ddl-auto=update
-  ```
+Config `applcations properties` 
+
+```properties
+spring.application.name=ApartmentPredictor
+#spring.datasource.url=jdbc:h2:tcp://localhost/~/MyProjects/Sandbox/ApartmentPredictorProject/db/rapartmentpredictordb
+spring.datasource.url=jdbc:h2:/home/albert/MyProjects/Sandbox/ApartmentPredictorProject/db/apartmentpredictordb
+#spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=albert
+#spring.datasource.username=sa
+spring.datasource.password=1234
+#spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.show-sql=true
+#spring.jpa.hibernate.ddl-auto=create
+spring.jpa.hibernate.ddl-auto=update
+```
 
 This [application.properties](cci:7://file:///home/albert/MyProjects/Sandbox/rentingCarTest/rentingCar-boot/src/main/resources/application.properties:0:0-0:0) file configures a Spring Boot application for aparment price predictor management with H2 database integration.
 
