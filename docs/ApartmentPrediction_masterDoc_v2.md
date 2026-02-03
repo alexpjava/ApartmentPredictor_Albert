@@ -355,8 +355,6 @@ Calls that will work
 
 Get operation: GET Cycle: Get all Apartments.
 
-
-
 ![](https://raw.githubusercontent.com/AlbertProfe/ApartmentPredictor/refs/heads/master/docs/screenshots/code-restcontroller.png)
 
 Post operation: POST Cycle: Create New Apartment
@@ -590,7 +588,8 @@ Database Dialect and DDL
 
 ### Populate DB
 
-- [ImportCSVtoH2](https://github.com/AlbertProfe/ApartmentPredictor/blob/master/docs/appends/ImportCSVtoH2.md)
+- [ImportCSVtoH2 - ApartmentPredictor/docs/appends/SQL-ImportCSVtoH2.md at master](https://github.com/AlbertProfe/ApartmentPredictor/blob/master/docs/appends/SQL-ImportCSVtoH2.md)
+- [PopulateApartmentsAPI - ApartmentPredictor/docs/appends/JPA-PopulateApartmentsAPI.md at master](https://github.com/AlbertProfe/ApartmentPredictor/blob/master/docs/appends/JPA-PopulateApartmentsAPI.md)
 
 ## Maven
 
