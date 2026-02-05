@@ -46,11 +46,12 @@ public class ApartmentRestController {
         //apartment.setId(UUID.randomUUID().toString());
         return apartmentService.createApartment(apartment);
     }
-
+    /*
     @PostMapping("/update")
     public Apartment updateApartment(@RequestBody Apartment apartment){
         return apartmentService.updateApartment(apartment);
     }
+    */
 
     @DeleteMapping("/deleteById")
     public void deleteApartmentById(@RequestParam String id){
