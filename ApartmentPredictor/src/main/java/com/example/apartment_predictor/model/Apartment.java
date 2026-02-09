@@ -32,15 +32,11 @@ public class Apartment {
     private List<Review> reviews = new ArrayList<>();
 
 
-    @ManyToMany(
-        mappedBy = "apartments",
-        cascade = CascadeType.ALL,
-        fetch = FetchType.EAGER)
-    
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
     @JoinTable(
-    /*    name = "apartment_school",
+        name = "apartment_school",
         joinColumns = @JoinColumn(name = "apartment_id"),
-        inverseJoinColumns = @JoinColumn(name = "school_id")*/
+        inverseJoinColumns = @JoinColumn(name = "school_id")
     )
     private List<School> schools = new ArrayList<>();
 

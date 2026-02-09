@@ -1,9 +1,12 @@
 package com.example.apartment_predictor.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class School {
@@ -16,11 +19,15 @@ public class School {
     private int rating;
     private boolean isPublic;
 
+    @ManyToMany(mappedBy = "schools")
+    private List<Apartment> apartments = new ArrayList<>();
+
     
 
     public School() {
         this.Id = UUID.randomUUID().toString();
     }
+
 
     public School(String name, String address, String city, String zipCode, int rating, boolean isPublic) {
         this.Id = UUID.randomUUID().toString();

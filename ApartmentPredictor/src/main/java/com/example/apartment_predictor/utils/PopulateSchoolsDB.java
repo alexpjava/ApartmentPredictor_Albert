@@ -27,7 +27,7 @@ SchoolService schoolService;
 
         for (int i = 0; i < qty; i++) {
 
-            String name = faker.country().name();
+            String name = faker.address().country();
             String address = faker.address().fullAddress();
             String city = faker.address().cityName();
             String zipCode = faker.address().zipCode();
