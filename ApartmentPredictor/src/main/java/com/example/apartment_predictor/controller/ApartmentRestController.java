@@ -73,6 +73,15 @@ public class ApartmentRestController {
         else
             return ResponseEntity.badRequest().body("Failed to populate apartments");
     }
-    
+
+    @PostMapping("/assingSchoolsToApartment")
+    public ResponseEntity<String> assignSchoolsToApartment(@RequestParam String apartmentId, @RequestBody String[] schoolIds) {
+        boolean success = apartmentService.assignSchoolsToApartment(apartmentId, schoolIds);
+        if (success) {
+            return ResponseEntity.ok("Schools assigned to apartment successfully.");
+        } else {
+            return ResponseEntity.badRequest().body("Failed to assign schools to apartment.");
+        }
+    }
 
 }

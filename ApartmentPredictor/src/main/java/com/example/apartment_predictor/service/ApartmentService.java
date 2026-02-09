@@ -79,6 +79,11 @@ public class ApartmentService {
 
     public void findApartmentByPrice (){}
 
+    public boolean assignSchoolsToApartment(String apartmentId, String[] schoolIds) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'assignSchoolsToApartment'");
+    }
+
 
 
 

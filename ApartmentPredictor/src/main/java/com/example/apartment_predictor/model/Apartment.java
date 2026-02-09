@@ -31,6 +31,20 @@ public class Apartment {
             fetch = FetchType.EAGER)
     private List<Review> reviews = new ArrayList<>();
 
+
+    @ManyToMany(
+        mappedBy = "apartments",
+        cascade = CascadeType.ALL,
+        fetch = FetchType.EAGER)
+    
+    @JoinTable(
+    /*    name = "apartment_school",
+        joinColumns = @JoinColumn(name = "apartment_id"),
+        inverseJoinColumns = @JoinColumn(name = "school_id")*/
+    )
+    private List<School> schools = new ArrayList<>();
+
+
     // Default constructor
     public Apartment() {
         this.id = UUID.randomUUID().toString();
