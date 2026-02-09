@@ -1,12 +1,17 @@
 package com.example.apartment_predictor.utils;
 
+import org.springframework.stereotype.Component;
+
 import com.example.apartment_predictor.model.School;
 import com.example.apartment_predictor.service.SchoolService;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.github.javafaker.Faker;
 
-import com.example.apartment_predictor.service.SchoolService;
-
-
+@Component
 public class PopulateSchoolsDB {
 
 @Autowired
@@ -16,7 +21,7 @@ SchoolService schoolService;
         int qtySchoolsCreated = 0;
         if (qty <= 0) return 0;
 
-        Faker faker = new Faker(new Locale("es-ES"));
+        Faker faker = new Faker();
         ThreadLocalRandom rnd = ThreadLocalRandom.current();
 
 
@@ -40,7 +45,7 @@ SchoolService schoolService;
                     isPublic // isPublic
             );
 
-            SchoolService.createSchool(school);
+            schoolService.createSchool(school);
 
             School schoolById = schoolService.findSchoolById(school.getId());
             if (schoolById != null) {

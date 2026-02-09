@@ -1,9 +1,11 @@
 package com.example.apartment_predictor.utils;
 
+import org.springframework.stereotype.Component;
+
 import com.example.apartment_predictor.model.Apartment;
 import com.example.apartment_predictor.service.ApartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 @Component
