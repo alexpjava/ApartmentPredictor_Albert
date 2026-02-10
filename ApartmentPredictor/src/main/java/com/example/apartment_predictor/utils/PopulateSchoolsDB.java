@@ -3,6 +3,7 @@ package com.example.apartment_predictor.utils;
 import org.springframework.stereotype.Component;
 
 import com.example.apartment_predictor.model.School;
+import com.example.apartment_predictor.service.ApartmentService;
 import com.example.apartment_predictor.service.SchoolService;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -17,6 +18,9 @@ public class PopulateSchoolsDB {
 @Autowired
 SchoolService schoolService;
 
+@Autowired
+ApartmentService apartmentService; // <--- Se añade esta inyección para obtener los apartamentos que seran utilizados para que se añadan escuelas.
+
     public int populateSchools(int qty) {
         int qtySchoolsCreated = 0;
         if (qty <= 0) return 0;
@@ -27,7 +31,7 @@ SchoolService schoolService;
 
         for (int i = 0; i < qty; i++) {
 
-            String name = faker.address().country();
+            String name = faker.university().name();
             String address = faker.address().fullAddress();
             String city = faker.address().cityName();
             String zipCode = faker.address().zipCode();

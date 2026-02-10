@@ -34,9 +34,9 @@ public class Apartment {
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
     @JoinTable(
-        name = "apartment_school",
+        /*name = "apartment_school",
         joinColumns = @JoinColumn(name = "apartment_id"),
-        inverseJoinColumns = @JoinColumn(name = "school_id")
+        inverseJoinColumns = @JoinColumn(name = "school_id")*/
     )
     private List<School> schools = new ArrayList<>();
 

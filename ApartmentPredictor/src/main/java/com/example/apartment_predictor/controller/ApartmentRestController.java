@@ -2,7 +2,7 @@ package com.example.apartment_predictor.controller;
 
 import com.example.apartment_predictor.model.Apartment;
 import com.example.apartment_predictor.service.ApartmentService;
-import com.example.apartment_predictor.utils.PopulateDB;
+import com.example.apartment_predictor.utils.PopulateApartmentsDB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class ApartmentRestController {
     ApartmentService apartmentService;
 
     @Autowired
-    PopulateDB populateDB;
+    PopulateApartmentsDB populateDB;
 
     @GetMapping("/getAll")
     public ResponseEntity<Iterable<Apartment>> getAllApartments(){
